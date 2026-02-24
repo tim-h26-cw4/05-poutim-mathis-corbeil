@@ -17,8 +17,6 @@ export default class Chef {
 
     const btnOrder = this.element.querySelector('.js-btn-order');
     btnOrder.addEventListener('click', this.sendOrder.bind(this));
-
-    console.log(this.menu);
   }
 
   sendOrder() {
