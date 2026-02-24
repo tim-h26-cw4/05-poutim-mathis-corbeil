@@ -20,6 +20,20 @@ export default class Chef {
   }
 
   sendOrder() {
-    console.log('juno Order');
+    this.container.innerText = '';
+    var nbPoutine = 0;
+    for (let i = 0; i < this.menu.length; i++) {
+      const poutine = this.menu[i];
+      console.log(poutine.selectedType);
+      if (poutine.selectedType != '') {
+        nbPoutine += 1;
+      }
+    }
+    console.log(nbPoutine);
+    const texteConteneur = document.createElement('p');
+
+    texteConteneur.innerText = `Nombre total de poutine(s) :  ${nbPoutine}`;
+
+    this.container.appendChild(texteConteneur);
   }
 }
